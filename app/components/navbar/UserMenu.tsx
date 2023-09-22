@@ -3,12 +3,14 @@
 import {FC, useCallback, useState} from 'react';
 import {AiOutlineMenu} from "react-icons/ai";
 import {Avatar} from "@/app/components/Avatar";
-import {MenuItem} from "@/app/components/Navbar/MenuItem";
+import {MenuItem} from "@/app/components/navbar/MenuItem";
+import {useRegisterModal} from "@/app/hooks/useRegisterModal";
 
 interface IUserMenuProps {
 }
 
 export const UserMenu: FC<IUserMenuProps> = () => {
+  const {onClose, onOpen} = useRegisterModal()
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleOpen = useCallback(() => {
@@ -74,8 +76,7 @@ export const UserMenu: FC<IUserMenuProps> = () => {
               }}
                         label={'login'}
               />
-              <MenuItem onClick={() => {
-              }}
+              <MenuItem onClick={onOpen}
                         label={'Sign up'}
               />
             </>

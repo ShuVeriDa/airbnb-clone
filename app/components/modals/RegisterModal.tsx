@@ -110,7 +110,7 @@ export const RegisterModal: FC<IRegisterModalProps> = () => {
                  hover:underline
                '
           >
-            Log in
+            Log in 1:50:00
           </div>
         </div>
       </div>

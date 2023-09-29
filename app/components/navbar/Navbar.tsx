@@ -5,11 +5,13 @@ import {Container} from "@/app/components/Container";
 import {Logo} from "@/app/components/navbar/Logo";
 import {Search} from "@/app/components/navbar/Search";
 import {UserMenu} from "@/app/components/navbar/UserMenu";
+import {User} from "@prisma/client";
 
 interface INavbarProps {
+  currentUser?: User | null
 }
 
-export const Navbar: FC<INavbarProps> = () => {
+export const Navbar: FC<INavbarProps> = ({currentUser}) => {
   return (
     <div className={"fixed w-full bg-white z-10 shadow-sm"}>
       <div className="
@@ -27,7 +29,7 @@ export const Navbar: FC<INavbarProps> = () => {
         '>
           <Logo />
           <Search />
-          <UserMenu />
+          <UserMenu currentUser={currentUser}/>
         </div>
       </Container>
       </div>

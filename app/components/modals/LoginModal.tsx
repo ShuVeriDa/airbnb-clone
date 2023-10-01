@@ -88,8 +88,7 @@ export const LoginModal: FC<ILoginModalProps> = () => {
       <Button outline
               label={"Continue with GitHub"}
               icon={AiFillGithub}
-              onClick={() => {
-              }}
+              onClick={() => signIn('github')}
       />
       <div className='
               text-neutral-500

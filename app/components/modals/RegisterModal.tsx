@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 import {Button} from "@/app/components/Button";
 import {FcGoogle} from "react-icons/fc";
 import {AiFillGithub} from "react-icons/ai";
+import {signIn} from "next-auth/react";
 
 interface IRegisterModalProps {
 }
@@ -84,8 +85,7 @@ export const RegisterModal: FC<IRegisterModalProps> = () => {
       <Button outline
               label={"Continue with GitHub"}
               icon={AiFillGithub}
-              onClick={() => {
-              }}
+              onClick={() => signIn("github")}
       />
       <div className='
               text-neutral-500

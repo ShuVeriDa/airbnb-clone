@@ -6,9 +6,10 @@ import {Logo} from "@/app/components/navbar/Logo";
 import {Search} from "@/app/components/navbar/Search";
 import {UserMenu} from "@/app/components/navbar/UserMenu";
 import {User} from "@prisma/client";
+import {SafeUserType} from "@/app/types";
 
 interface INavbarProps {
-  currentUser?: User | null
+  currentUser?: SafeUserType | null
 }
 
 export const Navbar: FC<INavbarProps> = ({currentUser}) => {

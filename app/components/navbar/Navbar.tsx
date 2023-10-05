@@ -7,6 +7,7 @@ import {Search} from "@/app/components/navbar/Search";
 import {UserMenu} from "@/app/components/navbar/UserMenu";
 import {User} from "@prisma/client";
 import {SafeUserType} from "@/app/types";
+import {Categories} from "@/app/components/navbar/Categories";
 
 interface INavbarProps {
   currentUser?: SafeUserType | null
@@ -34,6 +35,7 @@ export const Navbar: FC<INavbarProps> = ({currentUser}) => {
         </div>
       </Container>
       </div>
+      <Categories />
     </div>
   );
 };
